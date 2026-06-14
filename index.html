@@ -3,248 +3,298 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SONG | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#0f172a;
-    color:white;
+background:#0b1120;
+color:white;
+overflow-x:hidden;
 }
 
+/* NAVBAR */
+
 header{
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-    background:rgba(15,23,42,.9);
-    backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
+background:rgba(11,17,32,.85);
+backdrop-filter:blur(15px);
 }
 
 nav{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
 }
 
 .logo{
-    font-size:1.5rem;
-    font-weight:700;
-    color:#60a5fa;
+font-size:1.6rem;
+font-weight:700;
+background:linear-gradient(90deg,#60a5fa,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
+display:flex;
+list-style:none;
+gap:30px;
 }
 
 nav a{
-    text-decoration:none;
-    color:white;
-    transition:.3s;
+text-decoration:none;
+color:white;
+transition:.3s;
 }
 
 nav a:hover{
-    color:#60a5fa;
+color:#60a5fa;
 }
 
-section{
-    padding:100px 10%;
-}
+/* HERO */
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:
-    radial-gradient(circle at top left,#1e3a8a,transparent 40%),
-    radial-gradient(circle at bottom right,#7c3aed,transparent 40%);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+
+background:
+radial-gradient(circle at top left,#1e40af 0%,transparent 40%),
+radial-gradient(circle at bottom right,#7c3aed 0%,transparent 40%);
 }
 
-.hero-content h1{
-    font-size:4rem;
+.hero h1{
+font-size:4rem;
+margin-bottom:10px;
 }
 
-.hero-content span{
-    color:#60a5fa;
+.hero span{
+background:linear-gradient(90deg,#60a5fa,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.hero-content p{
-    margin:20px auto;
-    max-width:700px;
-    color:#cbd5e1;
+.typing{
+font-size:1.5rem;
+color:#94a3b8;
+height:40px;
+}
+
+.hero p{
+max-width:700px;
+margin:20px auto;
+color:#cbd5e1;
+line-height:1.7;
 }
 
 .btn{
-    display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
+display:inline-block;
+padding:14px 28px;
+margin:10px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
 
-.primary{
-    background:#3b82f6;
-    color:white;
+.btn-primary{
+background:#3b82f6;
+color:white;
 }
 
-.secondary{
-    border:2px solid #3b82f6;
-    color:#3b82f6;
+.btn-secondary{
+border:2px solid #3b82f6;
+color:#3b82f6;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
-.title{
-    text-align:center;
-    margin-bottom:50px;
-    font-size:2.5rem;
+/* SECTION */
+
+section{
+padding:100px 10%;
 }
 
-.about-card{
-    max-width:900px;
-    margin:auto;
-    background:#1e293b;
-    padding:40px;
-    border-radius:20px;
+.section-title{
+font-size:2.5rem;
+text-align:center;
+margin-bottom:50px;
 }
+
+/* ABOUT */
+
+.about{
+max-width:900px;
+margin:auto;
+background:#111827;
+padding:40px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.about p{
+line-height:1.8;
+color:#d1d5db;
+}
+
+/* SKILLS */
 
 .skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .skill-card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    transition:.3s;
+background:#111827;
+padding:25px;
+border-radius:18px;
+text-align:center;
+transition:.3s;
+border:1px solid rgba(255,255,255,.08);
 }
 
 .skill-card:hover{
-    transform:translateY(-8px);
+transform:translateY(-8px);
 }
 
+.skill-card h3{
+margin-bottom:10px;
+}
+
+/* PROJECTS */
+
 .projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 }
 
 .project-card{
-    background:#1e293b;
-    border-radius:20px;
-    overflow:hidden;
+background:#111827;
+border-radius:20px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
 }
 
 .project-image{
-    height:200px;
-    background:#334155;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:1.2rem;
+height:200px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+font-size:1.2rem;
+font-weight:600;
 }
 
 .project-content{
-    padding:25px;
+padding:25px;
 }
 
-.tags{
-    margin-top:15px;
+.project-content p{
+color:#d1d5db;
+margin:15px 0;
 }
 
 .tag{
-    display:inline-block;
-    padding:5px 12px;
-    margin:5px;
-    border-radius:20px;
-    background:#3b82f6;
-    font-size:.8rem;
+display:inline-block;
+padding:6px 12px;
+background:#2563eb;
+border-radius:20px;
+margin:5px;
+font-size:.8rem;
 }
 
+/* TIMELINE */
+
 .timeline{
-    max-width:800px;
-    margin:auto;
+max-width:900px;
+margin:auto;
 }
 
 .timeline-item{
-    background:#1e293b;
-    padding:25px;
-    margin-bottom:20px;
-    border-left:5px solid #3b82f6;
-    border-radius:10px;
+background:#111827;
+padding:25px;
+border-left:5px solid #3b82f6;
+border-radius:10px;
+margin-bottom:25px;
 }
 
-.contact{
-    max-width:700px;
-    margin:auto;
+/* CONTACT */
+
+.contact-box{
+max-width:800px;
+margin:auto;
+background:#111827;
+padding:40px;
+border-radius:20px;
 }
 
-.contact form{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.contact-box p{
+margin:15px 0;
 }
 
-input,textarea{
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    background:#1e293b;
-    color:white;
+.contact-box a{
+color:#60a5fa;
+text-decoration:none;
 }
 
-button{
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    background:#3b82f6;
-    color:white;
-    cursor:pointer;
-}
+/* FOOTER */
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:#020617;
+padding:30px;
+text-align:center;
+background:#020617;
+color:#94a3b8;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-.hero-content h1{
-    font-size:2.5rem;
+.hero h1{
+font-size:2.7rem;
 }
 
 nav ul{
-    gap:12px;
-    font-size:.9rem;
+display:none;
+}
+
+.section-title{
+font-size:2rem;
 }
 }
+
 </style>
 </head>
 
@@ -255,7 +305,6 @@ nav ul{
 <div class="logo">SONG</div>
 
 <ul>
-<li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
@@ -265,47 +314,57 @@ nav ul{
 </nav>
 </header>
 
-<section class="hero" id="home">
-<div class="hero-content">
+<section class="hero">
+
+<div>
+
 <h1>Hi, I'm <span>SONG</span></h1>
 
-<h2>BITM Student | Software Developer</h2>
+<div class="typing" id="typing"></div>
 
 <p>
-Passionate about software development, databases,
-artificial intelligence, and building practical
-solutions for real-world problems.
+Bachelor of Information Technology Management (BITM) student passionate about software engineering, databases, artificial intelligence, and creating solutions that solve real-world problems.
 </p>
 
-<a href="#projects" class="btn primary">View Projects</a>
-<a href="#contact" class="btn secondary">Contact Me</a>
+<a href="#projects" class="btn btn-primary">View Projects</a>
+
+<a href="https://github.com/NgZSONG"
+target="_blank"
+class="btn btn-secondary">
+GitHub Profile
+</a>
+
 </div>
+
 </section>
 
 <section id="about">
-<h2 class="title">About Me</h2>
 
-<div class="about-card">
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
 <p>
-I am a Bachelor of Information Technology Management (BITM)
-student with interests in Software Engineering,
-Database Systems, Artificial Intelligence,
-and Web Development.
+My name is SONG. I am currently pursuing a Bachelor of Information Technology Management (BITM).
 
-I enjoy developing systems that improve efficiency
-and solve real-world business problems.
+I enjoy developing software applications, designing databases, and exploring artificial intelligence technologies.
+
+My goal is to become a skilled software developer capable of building systems that improve efficiency and solve practical business problems.
 </p>
+
 </div>
+
 </section>
 
 <section id="skills">
-<h2 class="title">Skills</h2>
+
+<h2 class="section-title">Skills</h2>
 
 <div class="skills-grid">
 
 <div class="skill-card">
 <h3>C++</h3>
-<p>Application Development</p>
+<p>System Development</p>
 </div>
 
 <div class="skill-card">
@@ -315,7 +374,7 @@ and solve real-world business problems.
 
 <div class="skill-card">
 <h3>MySQL</h3>
-<p>Database Management</p>
+<p>Database Design</p>
 </div>
 
 <div class="skill-card">
@@ -334,123 +393,176 @@ and solve real-world business problems.
 </div>
 
 </div>
+
 </section>
 
 <section id="projects">
-<h2 class="title">Projects</h2>
+
+<h2 class="section-title">Projects</h2>
 
 <div class="projects">
 
 <div class="project-card">
+
 <div class="project-image">
 Mini Mart Stock Management System
 </div>
 
 <div class="project-content">
+
 <h3>Mini Mart Stock Management System</h3>
 
 <p>
-Inventory management system developed using
-C++ and MySQL for stock control,
-sales reporting, and transaction tracking.
+Inventory management system developed using C++ and MySQL featuring stock tracking, transaction history, inventory updates, and monthly sales reporting.
 </p>
 
-<div class="tags">
 <span class="tag">C++</span>
 <span class="tag">MySQL</span>
-</div>
+
 </div>
 </div>
 
 <div class="project-card">
+
 <div class="project-image">
 Face Mask Detection System
 </div>
 
 <div class="project-content">
+
 <h3>Face Mask Detection System</h3>
 
 <p>
-AI-based image classification system
-that detects Mask and No Mask conditions.
+Artificial Intelligence image classification project that identifies Mask and No Mask conditions using machine learning techniques.
 </p>
 
-<div class="tags">
 <span class="tag">Python</span>
 <span class="tag">AI</span>
-</div>
+
 </div>
 </div>
 
 <div class="project-card">
+
 <div class="project-image">
 Portfolio Website
 </div>
 
 <div class="project-content">
+
 <h3>Portfolio Website</h3>
 
 <p>
-Responsive personal portfolio website
-hosted using GitHub Pages.
+Responsive personal portfolio website hosted using GitHub Pages showcasing projects, skills, and academic achievements.
 </p>
 
-<div class="tags">
 <span class="tag">HTML</span>
 <span class="tag">CSS</span>
 <span class="tag">JavaScript</span>
-</div>
+
 </div>
 </div>
 
 </div>
+
 </section>
 
 <section id="education">
-<h2 class="title">Education</h2>
+
+<h2 class="section-title">Education</h2>
 
 <div class="timeline">
 
 <div class="timeline-item">
+
 <h3>Bachelor of Information Technology Management (BITM)</h3>
 
-<p>2023 - Present</p>
+<p><strong>2023 - Present</strong></p>
 
 <p>
-Relevant Subjects:
+Relevant Courses:
 Software Engineering,
 Database Systems,
 Artificial Intelligence,
-Human Computer Interaction,
-Data Structures.
+Data Structures,
+Human Computer Interaction.
 </p>
+
 </div>
 
 </div>
+
 </section>
 
 <section id="contact">
-<h2 class="title">Contact Me</h2>
 
-<div class="contact">
+<h2 class="section-title">Contact</h2>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
+<div class="contact-box">
 
-<br>
+<p><strong>Name:</strong> SONG</p>
 
-<p><strong>GitHub:</strong> https://github.com/Hice4827</p>
+<p>
+<strong>GitHub:</strong>
+<a href="https://github.com/NgZSONG" target="_blank">
+github.com/NgZSONG
+</a>
+</p>
+
+<p>
+<strong>Email:</strong>
+your-email@example.com
+</p>
 
 </div>
+
 </section>
 
 <footer>
-<p>© 2026 SONG. All Rights Reserved.</p>
+
+© 2026 SONG. All Rights Reserved.
+
 </footer>
+
+<script>
+
+const text = [
+"BITM Student",
+"Software Developer",
+"Database Enthusiast",
+"AI Learner"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+if(count === text.length){
+count = 0;
+}
+
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+
+count++;
+index = 0;
+
+setTimeout(type,1000);
+
+}else{
+setTimeout(type,100);
+}
+
+})();
+
+</script>
 
 </body>
 </html>
